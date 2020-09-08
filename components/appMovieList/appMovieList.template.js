@@ -1,11 +1,20 @@
-export default ({props, template}) => /*html*/ `
+export default ({props, state}) => {
+
+    const repeat = (template, dataArr) => {
+        return dataArr.map( item => template(item)).join('')
+    }
+
+    const movieTpl = (movie) => /*html*/ `
+        <app-movie data-props="{'movieId': '${movie.id}'}"></app-movie>
+    `
+
+    return /*html*/ `
     <div class="movie-list-wrapper">
-        <app-title data-props="{'title':'Vitrine de filmes'}"/>
+        <app-title data-props="{'title':'Filmes'}"></app-title>
         <div class="movie-list">
-            ${state.movieList.map( movie => /*html*/ `
-                <app-movie data-props="{'movieId': '${movie.id}'}"></app-movie>
-            `).join('')}
+            ${repeat(movieTpl, state.movieList)}
         </div>
-        <div class="use-list"></div>
+        <div class="user-list"></div>
     </div>
 `
+}
