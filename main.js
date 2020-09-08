@@ -1,16 +1,16 @@
 import { r9x } from 'r9x_js'
 import { appMain as main } from './components/appMain.component'
-import { appMovieList } from './components/appMovieList/appMovieList.component'
+import { appHome } from './components/appHome/appHome.component'
 import { appNotFound } from './components/appNotFound.component'
 
 import './assets/styles/reset.css'
 import './assets/styles/main.css'
 
 const routes = {
-    firstRoute: { hash: '#/', component: appMovieList },
+    firstRoute: { hash: '#/', component: appHome },
     defaultRoute: { hash: '#/404', component: appNotFound },
     otherRoutes: [
-        { hashExp: /^\#\/$/, component: appMovieList },
+        { hashExp: /^\#\/$/, component: appHome },
     ]
 }
 
