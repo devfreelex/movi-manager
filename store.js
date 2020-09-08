@@ -12,7 +12,11 @@ const store = storeFactory({
         { id: 2, name: 'Roberto', lastName:'Montana', cpf:'6665544788', movies:[] },
         { id: 3, name: 'Rafaela', lastName:'Fontes', cpf:'2254447895', movies:[] },
         { id: 4, name: 'Tatiana', lastName:'Alvarez', cpf:'3321145589', movies:[] },        
-    ]
+    ],
+    operation: {
+        client: null,
+        movie: null
+    }
 })
 
 export { store }

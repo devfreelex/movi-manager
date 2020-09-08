@@ -11,5 +11,8 @@ export default ({ props, state }) => /*html*/ `
             <app-search data-props="{'storeKey':'userList', 'placeholder':'Buscar clientes'}"></app-search>
             <app-user-list></app-user-list>
         </div>
+        <div class="sidebar">
+            <app-sidebar></app-sidebar>
+        </div>
     </div>
 `

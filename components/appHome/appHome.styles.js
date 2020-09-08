@@ -17,4 +17,11 @@ export default () => /*css*/ `
     app-home .user-list {
         margin-left:15px;
     }
+
+    app-home .sidebar {
+        display:block;
+        float:right;
+        width:250px;
+        position:relative;
+    }
 `

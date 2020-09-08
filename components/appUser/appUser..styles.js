@@ -15,7 +15,7 @@ export default () => /*css*/ `
     app-user .user-cpf {
         display:block;
         float:left;
-        width:50%;
+        width:100%;
         padding-bottom: 15px;
         border-bottom:1px #ebebeb solid;
         margin-bottom:15px;

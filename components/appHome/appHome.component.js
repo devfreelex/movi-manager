@@ -5,6 +5,7 @@ import { appTitle } from '../appTitle/appTitle.component'
 import { appMovieList } from '../appMovieList/appMovieList.component'
 import { appUserList } from '../appUserList/appUserList.component'
 import { appSearch } from '../appSearch/appSearch.component'
+import { appSidebar } from '../appSidebar/appSidebar.component'
 
 import { store } from '../../store'
 
@@ -14,7 +15,8 @@ const appHome = () => {
         appTitle,
         appMovieList,
         appUserList,
-        appSearch
+        appSearch,
+        appSidebar
     })
 
     return {
