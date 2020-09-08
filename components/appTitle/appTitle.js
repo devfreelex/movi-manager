@@ -15,4 +15,7 @@ export default () => /*css*/ `
         font-size: 1.2em;
         text-transform: uppercase;
     }
+
+    app-title .white { background:#fff; color: #6c31bf}
+    app-title .purple { background:#6c31bf; color:#fff;}
 `

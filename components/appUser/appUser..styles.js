@@ -1,5 +1,5 @@
 export default () => /*css*/ `
-    app-movie .movie-wrapper {
+    app-user .user-wrapper {
         display:block;
         float:left;
         width:100%;
@@ -11,19 +11,21 @@ export default () => /*css*/ `
         box-shadow: 3px 3px 3px #f4f3f6
     }
 
-    app-movie .title {
+    app-user .user-name,
+    app-user .user-cpf {
         display:block;
         float:left;
-        width:100%;
+        width:50%;
         padding-bottom: 15px;
         border-bottom:1px #ebebeb solid;
+        margin-bottom:15px;
     }
 
-    app-movie .buttons {
+    app-user .user-buttons {
         display:block;
         float:left;
         width:100%;
-        padding-top:15px;
         text-align:right;
     }
+
 `

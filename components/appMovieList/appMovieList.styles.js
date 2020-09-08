@@ -11,10 +11,7 @@ export default () => /*css*/ `
         display:block;
         float:left;
         width:calc(50% - 7.5px);
-        border-radius:4px;
-        border:1px #f4f2f7 solid;
         padding:15px;
-        background:#fcfcfd
     }
 
     app-movie-list .user-list {

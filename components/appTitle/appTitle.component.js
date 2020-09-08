@@ -1,5 +1,5 @@
 import template from './appTitle.template'
-import styles from './appTItle.styles'
+import styles from './appTitle'
 
 const appTitle = () => {
     return {

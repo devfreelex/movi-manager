@@ -1,5 +1,8 @@
 import template from './appMovie.template'
 import styles from './appMovie.style'
+
+import { appLink } from '../appLink/appLink.component'
+
 import { store } from '../../store'
 
 const appMovie = () => {
@@ -7,6 +10,10 @@ const appMovie = () => {
     const state = {
         movieList: store.get().movieList
     }
+
+    const children = () => ({
+        appLink
+    })
 
     const methods = ({pros, state}) => ({
 
@@ -26,6 +33,7 @@ const appMovie = () => {
         state,
         template,
         styles,
+        children,
         methods,
     }
 }
