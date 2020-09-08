@@ -2,10 +2,10 @@ import { storeFactory } from 'r9x_js'
 
 const store = storeFactory({
     movieList: [
-        {id:1, title:'Filme 1', description:'Descrição 1'},
-        {id:2, title:'Filme 2', description:'Descrição 2'},
-        {id:3, title:'Filme 3', description:'Descrição 3'},
-        {id:4, title:'Filme 4', description:'Descrição 4'},
+        {id:1, title:'Ultimos dias', description:'Descrição 1'},
+        {id:2, title:'Fim dos dias', description:'Descrição 2'},
+        {id:3, title:'Málevola', description:'Descrição 3'},
+        {id:4, title:'A rainha má', description:'Descrição 4'},
     ],
     userList: [
         { id: 1, name: 'Rodrigo', lastName:'Rocha', cpf:'9995586655', movies:[] },
