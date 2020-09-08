@@ -40,16 +40,11 @@ const appSearch = () => {
         }
     })
 
-    const directives = ({elm, query}) => ({
-      
-    })
-
     return {
         template,
         styles,
         events,
         methods,
-        directives,
     }
 }
 
