@@ -16,7 +16,7 @@ const store = storeFactory({
     operation: {
         client: null,
         movie: null
-    }
+    },
 })
 
 export { store }

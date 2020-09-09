@@ -2,6 +2,7 @@ import template from './appMovie.template'
 import styles from './appMovie.style'
 
 import { appLink } from '../appLink/appLink.component'
+import { appMarkTo } from '../appMarkTo/appMarkTo.component'
 
 import { store } from '../../store'
 
@@ -12,7 +13,8 @@ const appMovie = () => {
     }
 
     const children = () => ({
-        appLink
+        appLink,
+        appMarkTo
     })
 
     const methods = ({pros, state}) => ({
@@ -25,7 +27,9 @@ const appMovie = () => {
         hasMovies () {
             const { movieList } = state.get()
             return movieList.length
-        }
+        },
+
+        isSelected () {}
 
     })
 

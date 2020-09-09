@@ -12,7 +12,7 @@ export default ({ props, state }) => /*html*/ `
             <app-user-list></app-user-list>
         </div>
         <div class="sidebar">
-            <app-sidebar></app-sidebar>
+            <app-sidebar data-props="{'showButtons':true, 'buttons':['cancel', 'confirm']}"></app-sidebar>
         </div>
     </div>
 `

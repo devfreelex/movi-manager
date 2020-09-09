@@ -2,6 +2,8 @@ export default () => /*css*/ `
     app-link .link-wrapper {
         display:inline-block;
     }
+
+    app-link .selected {border-color:#2ad58e}    
     
     app-link .link {
         display:block;

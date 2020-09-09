@@ -2,6 +2,7 @@ import styles from './appUser..styles'
 import template from './appUser..template'
 
 import { appLink } from '../appLink/appLink.component'
+import { appMarkTo } from '../appMarkTo/appMarkTo.component'
 
 import { store } from '../../store'
 
@@ -10,11 +11,12 @@ const appUser = () => {
     const state = {
         cpf:'',
         fullName:'',
-        userList: store.get().userList
+        userList: store.get().userList,
     }
 
     const children = () => ({
-        appLink
+        appLink,
+        appMarkTo
     })
 
     const hooks = ({methods}) => ({
@@ -36,7 +38,9 @@ const appUser = () => {
             const { userList } = state.get()
             const user = userList.find( user => +user.id === +userId)
             return `${user.name} ${user.lastName}`
-        }
+        },
+
+        isSelected () {}
 
     })
 

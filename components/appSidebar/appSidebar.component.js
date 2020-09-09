@@ -25,15 +25,6 @@ const appSidebar = () => {
                 let showSidebar = methods.hasClientAndMovie()
                 state.set({client, movie, showSidebar})
             })
-
-            setTimeout(() => {
-                store.update((dataStore) => {
-                    dataStore.operation = {
-                        client: {id:1},
-                        movie: {id: 3}
-                    }
-                })
-            },5000)
         }
     })
 
@@ -65,6 +56,7 @@ const appSidebar = () => {
                 const user = dataStore.userList.find( user => +user.id === +client.id)
                 user.movies.push(movie)
                 dataStore.operation = { client: null, movie: null }
+                console.log(dataStore)
             })
         },
     
