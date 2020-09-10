@@ -1,4 +1,4 @@
-import styles from './appUser..styles'
+import styles from './appUser.styles'
 import template from './appUser..template'
 
 import { appLink } from '../appLink/appLink.component'

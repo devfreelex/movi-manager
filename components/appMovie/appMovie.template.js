@@ -7,7 +7,6 @@ export default ({props, state, methods}) => {
     const buttonsTpl = () => {
         if (notHaveButtons()) return ''
         return /*html*/ `
-            <app-link data-props="{'hash':'#/movie/${props.object.movieId}'}"></app-link>
             <app-mark-to data-props="{'type':'movie', 'movieId':'${props.object.movieId}'}"></app-mark-to>
         `
     }

@@ -8,7 +8,8 @@ export default () => /*css*/ `
         border-radius:4px;
         border:1px #f7f6f8 solid;
         background:#fff;
-        box-shadow: 3px 3px 3px #f4f3f6
+        box-shadow: 3px 3px 3px #f4f3f6;
+        text-align:left;
     }
 
     app-user .selected {border-color:#2ad58e}
