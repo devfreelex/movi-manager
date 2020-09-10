@@ -16,13 +16,24 @@ const appMovieList = () => {
     })
 
 
-    const hooks = ({ state }) => ({
+    const hooks = ({ state, methods }) => ({
         beforeOnInit() {
             store.subscribe(({ search }) => {
-                const movieList = search?.movieList
-                 state.set({ movieList })
+                const movieList = search.movieList
+                const hasChanges = methods.hasChanges(state.get().movieList, movieList)
+                if(hasChanges && movieList) state.set({ movieList })
             })
         }
+    })
+
+    const methods = () => ({
+
+        hasChanges(oldState, newState) {
+            const oldStateJson = JSON.stringify(oldState)
+            const newStateJson = JSON.stringify(newState)
+            return oldStateJson !== newStateJson
+        }       
+
     })
 
     return {
@@ -30,7 +41,8 @@ const appMovieList = () => {
         template,
         styles,
         children,
-        hooks
+        hooks,
+        methods
     }
 }
 

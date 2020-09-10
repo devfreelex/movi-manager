@@ -15,21 +15,33 @@ const appUserList = () => {
         appUser
     })
 
-    const hooks = ({ state }) => ({
+    const hooks = ({ state, methods }) => ({
         beforeOnInit() {
-            store.subscribe(({search}) => {
-                const userList = search?.userList
-                state.set({userList})
+            store.subscribe(({ search }) => {
+                const userList = search.userList
+                const hasChanges = methods.hasChanges(state.get().userList, userList)
+                if(hasChanges && userList) state.set({userList})
             })
         }
-    })    
+    })   
+    
+    const methods = () => ({
+        
+        hasChanges (oldState, newState) {
+            const oldStateJson = JSON.stringify(oldState)
+            const newStateJson = JSON.stringify(newState)
+            return oldStateJson !== newStateJson
+        }
+
+    })
 
     return {
         state,
         template,
         styles,
         children,
-        hooks
+        hooks, 
+        methods
     }
 }
 

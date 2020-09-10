@@ -23,7 +23,6 @@ const appMarkTo = () => {
                 dataStore.operation.client = user
             })
 
-            console.log(store.get().operation)
         }
 
         const setMovieOperation = (movieId) => {
@@ -31,7 +30,7 @@ const appMarkTo = () => {
                 const movie = dataStore.movieList.find(movie => +movie.id === +movieId)
                 dataStore.operation.movie = movie
             })
-            console.log(store.get().operation)
+
         }
 
         const setOperation = () => {
