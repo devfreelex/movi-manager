@@ -56,7 +56,6 @@ const appSidebar = () => {
                 const user = dataStore.userList.find( user => +user.id === +client.id)
                 user.movies.push(movie)
                 dataStore.operation = { client: null, movie: null }
-                console.log(dataStore)
             })
         },
     

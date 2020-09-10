@@ -19,7 +19,7 @@ const appMovieList = () => {
     const hooks = ({ state, methods }) => ({
         beforeOnInit() {
             store.subscribe(({ search }) => {
-                const movieList = search.movieList
+                const movieList = search?.movieList
                 const hasChanges = methods.hasChanges(state.get().movieList, movieList)
                 if(hasChanges && movieList) state.set({ movieList })
             })

@@ -11,6 +11,7 @@ const appUser = () => {
     const state = {
         cpf:'',
         fullName:'',
+        selected: false,
         userList: store.get().userList,
     }
 
@@ -20,9 +21,18 @@ const appUser = () => {
     })
 
     const hooks = ({methods}) => ({
+
+        beforeOnInit () {
+            store.subscribe((payload) => {
+                methods.userInOperation(payload) ? methods.selectUser() : methods.unselectUser()
+            })
+        },
+
         afterOnInit () {
+            
             methods.setCpf()
         }
+
     })
 
     const methods = ({props, state}) => ({
@@ -40,7 +50,23 @@ const appUser = () => {
             return `${user.name} ${user.lastName}`
         },
 
-        isSelected () {}
+        isSelected (userId) {
+            const { operation } = store.get()
+            return (operation.client !== null && +operation.client.id === +userId)
+        },
+
+        selectUser () {
+            state.set({selected: true})
+        },
+        unselectUser () {
+            state.set({ selected: false })
+        },
+
+        userInOperation(dataStore) {
+            const { operation } = dataStore
+            const { object } = props.get()
+            return operation.client !== null && +operation.client.id === +object.userId
+        }
 
     })
 

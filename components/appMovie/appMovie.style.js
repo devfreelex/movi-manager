@@ -11,6 +11,8 @@ export default () => /*css*/ `
         box-shadow: 3px 3px 3px #f4f3f6
     }
 
+    app-movie .selected {border-color:#2ad58e}
+
     app-movie .title {
         display:block;
         float:left;

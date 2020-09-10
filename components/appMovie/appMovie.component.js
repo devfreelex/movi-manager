@@ -9,7 +9,8 @@ import { store } from '../../store'
 const appMovie = () => {
 
     const state = {
-        movieList: store.get().movieList
+        movieList: store.get().movieList,
+        selected: false
     }
 
     const children = () => ({
@@ -17,7 +18,17 @@ const appMovie = () => {
         appMarkTo
     })
 
-    const methods = ({pros, state}) => ({
+    const hooks = ({methods}) => ({
+
+        beforeOnInit() {
+            store.subscribe((payload) => {
+                methods.movieInOperation(payload) ? methods.selectMovie() : methods.unselectMovie()
+            })
+        },        
+
+    })
+
+    const methods = ({props, state}) => ({
 
         getMovie (movieId) {
             const { movieList } = state.get()
@@ -29,7 +40,23 @@ const appMovie = () => {
             return movieList.length
         },
 
-        isSelected () {}
+        isSelected(movieId) {
+            const { operation } = store.get()
+            return (operation.movie !== null && +operation.movie.id === +movieId)
+        },
+
+        selectMovie() {
+            state.set({ selected: true })
+        },
+        unselectMovie() {
+            state.set({ selected: false })
+        },
+
+        movieInOperation(dataStore) {
+            const { operation } = dataStore
+            const { object } = props.get()
+            return operation.movie !== null && +operation.movie.id === +object.movieId
+        }
 
     })
 
@@ -38,6 +65,7 @@ const appMovie = () => {
         template,
         styles,
         children,
+        hooks,
         methods,
     }
 }
