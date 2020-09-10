@@ -17,7 +17,7 @@ export default () => /*css*/ `
         display:block;
         float:left;
         width:33.333%;
-        padding:15px;
+        padding:15px 15px 0 15px;
     }
 
     app-user-detail .row {

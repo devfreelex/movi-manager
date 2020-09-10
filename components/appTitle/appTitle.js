@@ -14,6 +14,7 @@ export default () => /*css*/ `
         border-bottom: 1px #ebebeb solid;
         font-size: 1.2em;
         text-transform: uppercase;
+        text-align:left;
     }
 
     app-title .white { background:#fff; color: #6c31bf}

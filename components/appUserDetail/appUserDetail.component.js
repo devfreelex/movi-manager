@@ -1,5 +1,6 @@
 import template from './appUserDetail.template'
 import styles from './appUserDetail.styles'
+
 import { store } from '../../store'
 import { appUser } from '../appUser/appUser.component'
 import { appMovie } from '../appMovie/appMovie.component'

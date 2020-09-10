@@ -5,7 +5,7 @@ export default ({props, state}) => {
 
     const movieTpl = (movie) => /*html*/ `
         <div class="grid">
-            <app-movie data-props="{'movieId': '${movie.id}'}"></app-movie>
+            <app-movie data-props="{'movieId': '${movie.id}', 'hideButtons':true}"></app-movie>
         </div>
     `   
 
@@ -17,7 +17,13 @@ export default ({props, state}) => {
                     <app-link data-props="{'hash': '#/', 'label':'Voltar'}"></app-link>
                 </div>
                 <div class="row">
+                    <app-title data-props="{'title':'Dados do cliente', 'style':'white'}"></app-title>
+                </div>
+                <div class="row">
                     <app-user data-props="{'userId': '${state.user.id}', 'hideButtons':true}"></app-user>
+                </div>
+                <div class="row">
+                    <app-title data-props="{'title':'Histórico de locação', 'style':'white'}"></app-title>
                 </div>
                 ${repeat(movieTpl, state.user.movies)}    
             </div>
