@@ -2,10 +2,10 @@ import { storeFactory } from 'r9x_js'
 
 const store = storeFactory({
     movieList: [
-        {id:1, title:'Ultimos dias', description:'Descrição 1'},
-        {id:2, title:'Fim dos dias', description:'Descrição 2'},
-        {id:3, title:'Málevola', description:'Descrição 3'},
-        {id:4, title:'A rainha má', description:'Descrição 4'},
+        { id: 1, title: 'Ultimos dias', description:'Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Quem num gosta di mé,'},
+        {id:2, title:'Fim dos dias', description:'Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Quem num gosta di mé,'},
+        {id:3, title:'Málevola', description:'Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Quem num gosta di mé,'},
+        {id:4, title:'A rainha má', description:'Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Quem num gosta di mé,'},
     ],
     userList: [
         { id: 1, name: 'Rodrigo', lastName:'Rocha', cpf:'9995586655', movies:[] },

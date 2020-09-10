@@ -14,11 +14,27 @@ export default () => /*css*/ `
     app-movie .selected {border-color:#2ad58e}
 
     app-movie .title {
+        font-weight:700
+    }
+
+    app-movie .title,
+    app-movie .description {
         display:block;
         float:left;
         width:100%;
         padding-bottom: 15px;
         border-bottom:1px #ebebeb solid;
+        color:#666;
+        font-size:1em;
+        text-transform:uppercase;
+        line-height:1.5em
+    }
+
+    app-movie .description {
+        text-transform: none;
+        padding-top:15px;
+        border-bottom:none;
+        font-weight:500
     }
 
     app-movie .buttons {

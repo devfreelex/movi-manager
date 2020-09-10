@@ -23,6 +23,30 @@ export default () => /*css*/ `
         margin-bottom:15px;
     }
 
+    app-user .user-name {
+        font-weight:700;
+        margin-bottom:0;
+        border-bottom:none;
+    }
+    
+    app-user .user-name,
+    app-user .user-cpf {
+        display:block;
+        float:left;
+        width:100%;
+        padding-bottom: 15px;
+        border-bottom:1px #ebebeb solid;
+        color:#666;
+        font-size:1em;
+        text-transform:uppercase;
+        line-height:1.5em;
+    }
+
+    app-user .user-cpf {
+        text-transform: none;
+        padding-top:15px;
+    }    
+
     app-user .user-buttons {
         display:block;
         float:left;

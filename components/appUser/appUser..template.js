@@ -16,7 +16,7 @@ export default ({props, state, methods}) => {
     
     return /*html*/ `
     <div class="user-wrapper ${methods.isSelected(userId) && !notHaveButtons() ? 'selected' : ''}">
-        <div class="user-name">Nome: ${methods.getFullName(userId)}</div>
+        <div class="user-name"> ${methods.getFullName(userId)}</div>
         <div class="user-cpf">CPF: ${state.cpf}</div>
         ${buttonsTpl()}
     </div>`

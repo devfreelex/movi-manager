@@ -15,6 +15,7 @@ export default ({props, state, methods}) => {
     return /*html*/ `
     <div class="movie-wrapper ${methods.isSelected(props.object.movieId) && !notHaveButtons() ? 'selected' : ''}">
         <div class="title">${movie.title}</div>
+        <div class="description">${movie.title} - ${movie.description}</div>
         <div class="buttons">
             ${buttonsTpl()}
         </div>
