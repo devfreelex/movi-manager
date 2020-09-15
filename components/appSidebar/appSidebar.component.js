@@ -61,12 +61,11 @@ const appSidebar = () => {
     
         hasClientAndMovie () {
             const { operation } = store.get()
-
-
             return (operation.client && operation.movie) !== null
         }
 
     })
+    
     return {
         state,
         methods,
